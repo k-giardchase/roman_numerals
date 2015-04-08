@@ -85,3 +85,20 @@ function roman_translator (number) {
         return very_final;
 
 }
+
+
+        $(document).ready(function() {
+
+            $('#translator').submit(function(event) {
+
+        var number = $('input#number').val();
+
+        var result = roman_translator(number);
+
+        $('.roman').text(result);
+
+        $('#result').show();
+
+        event.preventDefault();
+    });
+});
